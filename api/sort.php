@@ -16,6 +16,7 @@
 
         data.append('file', $input.prop('files')[0]);
 
+        isLoading();
         $.ajax({
             type: "POST",
             url: "api/sort-result.php",
@@ -26,5 +27,24 @@
                 $("#result").html(response);
             },
         });
+    }
+
+    function isLoading() {
+        $("#result").html(`
+            <div class="lds-spinner">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        `);
     }
 </script>

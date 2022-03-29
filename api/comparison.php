@@ -21,6 +21,7 @@
             data.append('file1', file1.prop('files')[0]);
             data.append('file2', file2.prop('files')[0]);
     
+            isLoading();
             $.ajax({
                 type: "POST",
                 url: "api/comparison-result.php",
@@ -32,5 +33,24 @@
                 },
             });
         }
+    }
+
+    function isLoading() {
+        $("#result").html(`
+            <div class="lds-spinner">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        `);
     }
 </script>
