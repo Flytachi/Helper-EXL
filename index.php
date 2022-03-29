@@ -16,6 +16,7 @@
    
     <div class="container" id="root">
         <h1>Helper EXL</h1>
+        <div class="spinner"></div>
     </div>
 
     <script type="module" src="./assets/app.js"></script>
