@@ -6,6 +6,14 @@
 <label for="file2"><b>Файл (новый):</b></label>
 <input id="file2" type="file" name="file2" onchange="submitFile()">
 
+<label for="sorting"><b>Сортировать по:</b></label>
+<select id="sorting" onchange="submitFile()">
+    <option value="mark">Модель</option>
+    <option value="art">Артикул</option>
+    <option value="qtyOld">Кол-во (Старый)</option>
+    <option value="qtyNew">Кол-во (Новый)</option>
+</select>
+
 <hr>
 
 <div id="result"></div>
@@ -20,6 +28,7 @@
         if(file1.val() && file2.val()){
             data.append('file1', file1.prop('files')[0]);
             data.append('file2', file2.prop('files')[0]);
+            data.append('sort', $("#sorting").val());
     
             isLoading();
             $.ajax({

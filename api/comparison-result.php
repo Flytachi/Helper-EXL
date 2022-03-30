@@ -6,13 +6,6 @@ if ($_FILES) {
     if ($_FILES['file2']) $data2 = read_excel($_FILES['file2']['tmp_name']); unset($data2[0]);
     $data = [];
 
-   /*  echo "<pre>";
-    print_r($data1);
-    echo "</pre>";
-    echo "<pre>";
-    print_r($data2);
-    echo "</pre>"; */
-
     $array = [];
     $new_data1 = [];
     foreach ($data1 as $value) {
@@ -63,13 +56,13 @@ if ($_FILES) {
             <tr>
                 <th>Модель</th>
                 <th>Артикул</th>
-                <th>Старый пр.</th>
-                <th>Новый пр.</th>
+                <th>Кол-во (Старый)</th>
+                <th>Кол-во (Новый)</th>
             </tr>
         </thead>
         <tbody>
             <?php
-            foreach (array_multisort_value($newData, 'mark', SORT_DESC) as $row) {
+            foreach (array_multisort_value($newData, $_POST['sort'], SORT_DESC) as $row) {
                 ?>
                 <tr>
                     <td><?= $row['mark'] ?></td>

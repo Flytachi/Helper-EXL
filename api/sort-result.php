@@ -29,7 +29,7 @@ if ($_FILES) {
                     );
                 }
             }
-            foreach (array_multisort_value($new_data, 'qty', SORT_DESC) as $row) {
+            foreach (array_multisort_value($new_data, $_POST['sort'], SORT_DESC) as $row) {
                 ?>
                 <tr>
                     <td><?= $row['mark'] ?></td>

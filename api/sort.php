@@ -3,6 +3,13 @@
 <label for="file"><b>Файл:</b></label>
 <input id="file" type="file" name="document" onchange="submitFile()">
 
+<label for="sorting"><b>Сортировать по:</b></label>
+<select id="sorting" onchange="submitFile()">
+    <option value="mark">Модель</option>
+    <option value="art">Артикул</option>
+    <option value="qty">Количество</option>
+</select>
+
 <hr>
 
 <div id="result"></div>
@@ -15,6 +22,7 @@
         var data = new FormData;
 
         data.append('file', $input.prop('files')[0]);
+        data.append('sort', $("#sorting").val());
 
         isLoading();
         $.ajax({
