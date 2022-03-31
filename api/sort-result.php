@@ -4,7 +4,8 @@ require 'lib.php';
 if ($_FILES) {
     if ($_FILES['file']) $data = read_excel($_FILES['file']['tmp_name']); unset($data[0]);
     ?>
-    <table class="table">
+    <button class="btn" onclick="ExportExcel('table', 'Document', 'document.xls')">Excel</button>
+    <table class="table" id="table">
         <thead>
             <tr>
                 <th>Марка</th>

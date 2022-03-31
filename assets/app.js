@@ -30,4 +30,4 @@ $(".nav-item").on('click', (item) => {
     $.ajax(item.target.dataset.url).then((responce) => {
         $("#root").html(responce);
     });
-})
+});

@@ -51,7 +51,8 @@ if ($_FILES) {
         }
     }
     ?>
-    <table class="table">
+    <button class="btn" onclick="ExportExcel('table', 'Document', 'document.xlsx')">Excel</button>
+    <table class="table" id="table">
         <thead>
             <tr>
                 <th>Модель</th>

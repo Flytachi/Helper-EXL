@@ -43,23 +43,4 @@
             });
         }
     }
-
-    function isLoading() {
-        $("#result").html(`
-            <div class="lds-spinner">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-        `);
-    }
 </script>

@@ -20,5 +20,6 @@
     </div>
 
     <script type="module" src="./assets/app.js"></script>
+    <script src="./assets/scripts.js"></script>
 </body>
 </html>
