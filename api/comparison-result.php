@@ -22,7 +22,7 @@ if ($_FILES) {
                 'qty' => (is_numeric($value['2'])) ? $value['2'] : 0
             );
         }
-    }   
+    }
 
     $newData2 = [];
     foreach ($data2 as $value) {
