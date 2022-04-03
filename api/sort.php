@@ -8,6 +8,7 @@
     <option value="mark">Модель</option>
     <option value="art">Артикул</option>
     <option value="qty">Количество</option>
+    <option value="price">Цена</option>
 </select>
 
 <hr>

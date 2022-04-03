@@ -12,6 +12,7 @@
     <option value="art">Артикул</option>
     <option value="qtyOld">Кол-во (Старый)</option>
     <option value="qtyNew">Кол-во (Новый)</option>
+    <option value="price">Цена</option>
 </select>
 
 <hr>
